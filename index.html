@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CRUD-javascript-fb</title>
+  </head>
+  <body>
+    <h1>TASKS</h1>
+    <form id="task-form">
+      <label for="task-title">Title:</label>
+      <input type="text" id="task-title" placeholder="Task Title" />
+      <label for="task-description">Title:</label>
+      <textarea
+        name="task-description"
+        id="task-description"
+        rows="3"
+        placeholder="Task Description"
+      ></textarea>
+
+      <button type="submit" id="btn-task-save">Save</button>
+    </form>
+
+    <div id="task-container"></div>
+
+    <script type="module" src="./index.js"></script>
+  </body>
+</html>
