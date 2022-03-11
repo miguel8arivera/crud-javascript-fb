@@ -4,25 +4,53 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./index.css" />
+    <link
+      rel="stylesheet"
+      href=" https://bootswatch.com/5/quartz/bootstrap.min.css"
+    />
     <title>CRUD-javascript-fb</title>
   </head>
-  <body>
-    <h1>TASKS</h1>
-    <form id="task-form">
-      <label for="task-title">Title:</label>
-      <input type="text" id="task-title" placeholder="Task Title" />
-      <label for="task-description">Title:</label>
-      <textarea
-        name="task-description"
-        id="task-description"
-        rows="3"
-        placeholder="Task Description"
-      ></textarea>
+  <body class="bg-dark">
+    <div class="container p-4">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="card">
+            <div class="card-body">
+              <h1 class="h4">Add Task</h1>
+              <form id="task-form">
+                <label for="task-title">Title:</label>
+                <input
+                  class="form-control mb-3"
+                  type="text"
+                  id="task-title"
+                  placeholder="Task Title"
+                />
+                <label for="task-description">Description:</label>
+                <textarea
+                  class="form-control mb-3"
+                  name="task-description"
+                  id="task-description"
+                  rows="3"
+                  placeholder="Task Description"
+                ></textarea>
 
-      <button type="submit" id="btn-task-save">Save</button>
-    </form>
-
-    <div id="task-container"></div>
+                <button
+                  class="btn btn-primary"
+                  type="submit"
+                  id="btn-task-save"
+                >
+                  Save
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div id="task-container"></div>
+        </div>
+      </div>
+    </div>
 
     <script type="module" src="./index.js"></script>
   </body>

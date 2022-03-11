@@ -12,23 +12,26 @@ let editStatus = false;
 let id = "";
 window.addEventListener("DOMContentLoaded", async () => {
   onGetTasks((querySnapshot) => {
-    let html = "";
+    taskContainer.innerHTML = "";
 
     querySnapshot.forEach((doc) => {
       const tasks = doc.data();
-      html += `
-     <div>
-      <h3>${tasks.title}</h3>
+      taskContainer.innerHTML += `
+     <div class='card card-body mt-2 border-primary'>
+      <h3 class ='h5'>${tasks.title}</h3>
       <p>${tasks.description}</p>
-      <button class='btn-delete' data-id='${doc.id}'>Delete</button>
-      <button class='btn-edit' data-id='${doc.id}'>Edit</button>
+      <div '>
+      <button class='btn btn-primary  btn-delete' data-id='${doc.id}'>Delete</button>
+      
+      <button class='btn btn-secondary btn-edit' data-id='${doc.id}'>Edit</button>
+      </div>
      
      </div>
     
     
     `;
     });
-    taskContainer.innerHTML = html;
+
     const btnsDelete = taskContainer.querySelectorAll(".btn-delete");
 
     btnsDelete.forEach((btn) => {
